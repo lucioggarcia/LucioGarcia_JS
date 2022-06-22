@@ -56,14 +56,21 @@ while(entrada!="ESC"){
 }
 function Bienvenida(){
 
-    alert("Bienvenido/a!");
-    alert("LISTA DE PRECIOS");
-    alert("Botines (BOT) --- $5000");
-    alert("Medias (MED) --- $700");
-    alert("Guantes (GUA) --- $2000");
-    alert("Camiseta (CAM) ---$3000");
-    alert("PROMOCION! 20% de descuento en compras mayores a $20000")
+    for (const producto of BBDD){
+        
+        let contenedor = document.createElement("div")
 
+        contenedor.innerHTML= `<h3> NOMBRE: ${producto.nombre} </h3>
+                                <p> COD: ${producto.codigo} </p>
+                                <p> PRECIO: $ ${producto.precio}`
+        document.body.appendChild(contenedor)           
+    }  
+
+    let promocion = document.createElement("p")
+
+    promocion.innerHTML= `<h4> PROMOCION! 20% de descuento en compras mayores a $20000 </h4>`
+
+    document.body.appendChild(promocion)
 }
 function buscarProducto(codbuscado){
     let buscado= BBDD.find(producto=>producto.codigo===codbuscado);
@@ -82,14 +89,9 @@ function Descuento(valor){
     valor=valor*0.8;
     return valor;
 }
+function FinalizarCompra(){
 
-
-Bienvenida();
-
-solicitarEntrada();
-
-
-let entrada2 = prompt("Desea agregar algo al carrito? (SI/NO)");
+    let entrada2 = prompt("Desea agregar algo al carrito? (SI/NO)");
 
 if(entrada2==="SI"){
     solicitarEntrada();
@@ -102,3 +104,19 @@ if(aplicaDescuento(total)){
 }
 
 console.log("El total de su compra es de $ " + total );
+
+}
+
+let botoninfo = document.getElementById("boton-info")
+
+botoninfo.onclick =Bienvenida;
+
+let botoniniciar = document.getElementById("boton-primary")
+
+botoniniciar.onclick = solicitarEntrada;
+
+let botontotal= document.getElementById("boton-success")
+
+botontotal.onclick=FinalizarCompra;
+
+
