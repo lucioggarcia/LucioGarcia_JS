@@ -119,20 +119,10 @@ console.log("El total de su compra es de $ " + total );
 
 }
 function AgregarAlCarrito(prodId){
-    const existe= carrito.some(prod=>prod.id===prodId)
-
-    if(existe){
-        const prod= carrito.map(prod=>{
-            if(prod.id===prodId){
-                prod.cantidad++
-            }
-        })
-    } else{
     const item=BBDD.find((prod)=>prod.id===prodId)
     carrito.push(item)
+    ActualizarCarrito()
    
-}
-ActualizarCarrito()
 }
 function ActualizarCarrito(){
     contenedorcarrito.innerHTML=""
@@ -166,6 +156,7 @@ const contenedorproductos= document.getElementById("contenedor_prod")
 const contenedorcarrito=document.getElementById("carrito-contenedor")
 const contadorCarrito=document.getElementById("contadorCarrito")
 const precioTotal= document.getElementById("precioTotal")
+const botonVaciar = document.getElementById('vaciar-carrito')
 let carrito = []
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -173,6 +164,11 @@ document.addEventListener("DOMContentLoaded", ()=>{
         carrito= JSON.parse(localStorage.getItem("carrito"))
         ActualizarCarrito()
     }
+})
+
+botonVaciar.addEventListener('click', () => {
+    carrito.length = 0
+    ActualizarCarrito()
 })
 
 BBDD.forEach((producto) =>{
