@@ -62,7 +62,8 @@ const contenedorproductos= document.getElementById("contenedor_prod")
 const contenedorcarrito=document.getElementById("carrito-contenedor")
 const contadorCarrito=document.getElementById("contadorCarrito")
 const precioTotal= document.getElementById("precioTotal")
-const botonVaciar = document.getElementById('vaciar-carrito')
+const botonVaciar = document.getElementById("vaciar-carrito")
+const botonfinalizar = document.getElementById("finalizar-compra")
 let carrito = []
 
 document.addEventListener("DOMContentLoaded", ()=>{
@@ -75,6 +76,20 @@ document.addEventListener("DOMContentLoaded", ()=>{
 botonVaciar.addEventListener('click', () => {
     carrito.length = 0
     ActualizarCarrito()
+})
+
+botonfinalizar.addEventListener('click',()=>{
+    Swal.fire({
+        title: 'Estas seguro/a?',
+        text: "Desea confirmar su compra?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#28A709',
+        cancelButtonColor: '#F00909',
+        confirmButtonText: 'Confirmar compra',
+        cancelButtonText: 'No, cancelar!'
+
+    })    
 })
 
 BBDD.forEach((producto) =>{
@@ -91,6 +106,13 @@ BBDD.forEach((producto) =>{
     const boton=document.getElementById(`agregar${producto.id}`)
     boton.addEventListener("click",()=>{
         AgregarAlCarrito(producto.id)
+        Swal.fire({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Agregado al carrito!',
+            showConfirmButton: false,
+            timer: 850
+          })
     })
 })
 
