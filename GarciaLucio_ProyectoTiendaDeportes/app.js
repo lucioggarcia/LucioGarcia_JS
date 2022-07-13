@@ -17,19 +17,6 @@ class Producto{
 
 let total=0;
 
-/*const BBDD=[new Producto("botines","bot",1,5000,1,`img/botines.jpg`), 
-            new Producto("medias","med",2,700,1,`img/mediasf.jpg`), 
-            new Producto("guantes","gua",3,2000,1,`img/guantesa.jpg`), 
-            new Producto("camiseta","cam",4,3000,1,`img/camisetau.jpg`)]*/
-  
-//Funciones
-
-/*function AgregarAlCarrito(prodId){
-    const item=BBDD.find((prod)=>prod.id===prodId)
-    carrito.push(item)
-    ActualizarCarrito()
-   
-}*/
 function AgregarAlCarrito(prodId){
     fetch('data.json')
         .then((res)=> res.json())
@@ -101,29 +88,6 @@ botonfinalizar.addEventListener('click',()=>{
     })    
 })
 
-/*BBDD.forEach((producto) =>{
-    const div= document.createElement("div")
-    div.classList.add("producto")
-    div.innerHTML = `
-    <img src=${producto.img} alt="...">
-    <h3>${producto.nombre}</h3>
-    <p class="card-text">Precio: $${producto.precio}</p>
-    <button id= "agregar${producto.id}" class="btn btn-primary">Agregar <i class="fas fa-shopping-cart"></i></button>
-  
-    `
-    contenedorproductos.appendChild(div)
-    const boton=document.getElementById(`agregar${producto.id}`)
-    boton.addEventListener("click",()=>{
-        AgregarAlCarrito(producto.id)
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: 'Agregado al carrito!',
-            showConfirmButton: false,
-            timer: 850
-          })
-    })
-})*/
 
 fetch('data.json')
     .then((res)=> res.json())
