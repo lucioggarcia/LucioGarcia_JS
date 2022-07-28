@@ -1,7 +1,23 @@
 [
-    {"nombre": "Botines", "codigo": "BOT", "id": 1, "precio": 5000, "cantidad": 1,"img": "./img/botines.jpg" },
-    {"nombre": "Medias", "codigo": "MED", "id": 2, "precio": 700, "cantidad": 1,"img": "./img/mediasf.jpg" },
-    {"nombre": "Guantes", "codigo": "GUA", "id": 3, "precio": 2000, "cantidad": 1,"img": "./img/guantesa.jpg" },
-    {"nombre": "Camiseta", "codigo": "CAM", "id": 4, "precio": 3000, "cantidad": 1,"img": "./img/camisetau.jpg" }
+    {"nombre": "Botines Nike Mercurial", "codigo": "BOT", "id": 1, "precio": 25000, "cantidad": 1,"img": "./img/botines.jpg" },
+    {"nombre": "Medias Azules", "codigo": "MED", "id": 2, "precio": 1700, "cantidad": 1,"img": "./img/mediasf.jpg" },
+    {"nombre": "Guantes DRB", "codigo": "GUA", "id": 3, "precio": 12000, "cantidad": 1,"img": "./img/guantesa.jpg" },
+    {"nombre": "Camiseta Unión", "codigo": "CAM", "id": 4, "precio": 13000, "cantidad": 1,"img": "./img/camisetau.jpg" },
+    {"nombre": "Botines Nike Phantom", "codigo": "BOT", "id": 5, "precio": 25000, "cantidad": 1,"img": "./img/botines2.jpg" },
+    {"nombre": "Medias Rojas", "codigo": "MED", "id": 6, "precio": 1700, "cantidad": 1,"img": "./img/medias2.jpg" },
+    {"nombre": "Guantes SP Blancos", "codigo": "GUA", "id": 7, "precio": 12000, "cantidad": 1,"img": "./img/guantes2.jpg" },
+    {"nombre": "Camiseta Barcelona", "codigo": "CAM", "id": 8, "precio": 13000, "cantidad": 1,"img": "./img/camiseta2.jpg" },
+    {"nombre": "Botines Nike Mercurial", "codigo": "BOT", "id": 9, "precio": 25000, "cantidad": 1,"img": "./img/botines3.jpg" },
+    {"nombre": "Medias Blancas", "codigo": "MED", "id": 10, "precio": 1700, "cantidad": 1,"img": "./img/medias3.jpg" },
+    {"nombre": "Guantes Reusch", "codigo": "GUA", "id": 11, "precio": 12000, "cantidad": 1,"img": "./img/guantes3.jpg" },
+    {"nombre": "Camiseta Barcelona", "codigo": "CAM", "id": 12, "precio": 13000, "cantidad": 1,"img": "./img/camiseta3.jpg" },
+    {"nombre": "Botines Nike Tiempo", "codigo": "BOT", "id": 13, "precio": 25000, "cantidad": 1,"img": "./img/botines4.jpg" },
+    {"nombre": "Medias Negras", "codigo": "MED", "id": 14, "precio": 1700, "cantidad": 1,"img": "./img/medias4.jpg" },
+    {"nombre": "Guantes Reusch", "codigo": "GUA", "id": 15, "precio": 12000, "cantidad": 1,"img": "./img/guantes4.jpg" },
+    {"nombre": "Camiseta Atletico", "codigo": "CAM", "id": 16, "precio": 13000, "cantidad": 1,"img": "./img/camiseta4.jpg" },
+    {"nombre": "Botines Nike Phantom", "codigo": "BOT", "id": 17, "precio": 25000, "cantidad": 1,"img": "./img/botines5.jpg" },
+    {"nombre": "Medias Verdes", "codigo": "MED", "id": 18, "precio": 1700, "cantidad": 1,"img": "./img/medias5.jpg" },
+    {"nombre": "Guantes SP Amarillos", "codigo": "GUA", "id": 19, "precio": 12000, "cantidad": 1,"img": "./img/guantes5.jpg" },
+    {"nombre": "Camiseta Manchester", "codigo": "CAM", "id": 20, "precio": 13000, "cantidad": 1,"img": "./img/camiseta5.jpg" }
 
 ]
