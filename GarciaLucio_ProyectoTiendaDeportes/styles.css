@@ -139,3 +139,21 @@ p {
 .productoEnCarrito:hover {
     border-left: 5px solid royalblue;
 }
+
+.footer{
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+.contenedor-filtros{
+    margin-top: 25px;
+}
+.filtros{
+    display: flex;
+    justify-content: center;
+}
+.filtros li {
+    list-style: none;
+    margin-right: 10px;
+}
+    
